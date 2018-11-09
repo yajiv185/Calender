@@ -8,7 +8,7 @@
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
 
 *[class*="fontawesome-"]:before {
-  font-family: 'FontAwesome', sans-serif;
+	font-family: 'FontAwesome', sans-serif;
 }
 
 /* ---------- GENERAL ---------- */
@@ -30,12 +30,6 @@ h2 {
 	margin: .25em 0;
 }
 
-h3 {
-	font-size: 1.5em;
-	line-height: 1em;
-	margin: .33em 0;
-}
-
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -54,10 +48,49 @@ table {
 	display: none;
 }
 
+.margin-top-5 {
+	margin-top: 5px;
+}
+
+.margin10 {
+	margin: 10px;
+}
+
+.padding10 {
+	padding: 10px;
+}
+
+.overflow-auto {
+	overflow: auto;
+}
+
+.text-align-right {
+	text-align: right;
+}
+
+input:disabled {
+	background-color: #b4c1ce;
+	opacity: .6;
+}
+
+input::placeholder {
+	color: #ac9494af;
+	opacity: .5;
+	padding-left: 10px;
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	background: transparent;
+}
+
 /* ---------- CALENDAR ---------- */
 
 .calendar {
 	text-align: center;
+	border-right: #0d08e9 5px solid;
+	border-left: #0d08e9 5px solid;
+	border-radius: 30px;
 }
 
 .calendar header {
@@ -101,7 +134,7 @@ table {
 	border: 2px solid #cbd1d2;
 }
 
-.current-day {
+.selected-day {
 	background: #00addf;
 	color: #f9f9f9;
 }
@@ -124,7 +157,7 @@ table {
 	width: .5em;
 }
 
-.event.current-day:after {
+.event.selected-day:after {
 	background: #f9f9f9;
 }
 
@@ -156,9 +189,9 @@ table {
 	right: 6em;
 }
 
-/*-------------event-container-----------*/
+/* ------------- EVENT CONTAINER ----------- */
+
 .event-container {
-	border: #000 5px solid;
 	height: 538px;
 	right: 0%;
 	top: 50%;
@@ -170,48 +203,148 @@ table {
 .event-head {
 	height: 10%;
 	text-align: center;
+	border: #0d08e9 5px solid;
+	border-radius: 30px;
+	border-bottom: 0px;
+	padding-bottom: 10px
 }
 
 .event-list {
 	height: 70%;
-	border: #000 5px solid;
+	border-right: #0d08e9 5px solid;
+	border-left: #0d08e9 5px solid;
+	border-radius: 30px;
+	padding: 10px;
+	text-align: center;
+}
+
+.event-text {
+	font-weight: 700;
+	color: #df7c47;
+}
+
+.event-list ul {
+	list-style-type: none;
+	margin-left: -40px;
+}
+
+.li-odd {
+	border: #1e90ff 5px solid;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #dcdcdc;
+}
+
+.li-even {
+	border: #ff1493 5px solid;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #f5fffa;
+}
+
+.event-content {
+	font-weight: 600;
+}
+
+.event-info {
+	font-weight: 500;
 }
 
 .event-add {
 	text-align: center;
-	/* border: #000 5px solid; */
-	margin-top: 10px;
+	border: #0d08e9 5px solid;
+	padding: 10px;
+	border-radius: 35px;
+	border-top: 0px;
 }
 
-button {
+#addEventBtn {
 	padding: 10px 20px;
 	border-radius: 50px;
 	font-size: 20px;
 	background: #00addf;
-	border:  2px solid #00addf;
+	border: 2px solid #00addf;
 }
+
+.no-event {
+	color: #f00;
+	font-weight: 800;
+	font-size: 20px;
+}
+
+/* -------------- ADD EVENT POPUP ------------*/
 
 .add-event-popup {
 	position: fixed;
 	z-index: 3;
-	height: 500px;
-	width: 500px;
-	border: #000 5px solid;
+	height: 230px;
+	width: 370px;
+	border: #f00 5px solid;
+	background-color: #fff;
+	text-align: center;
 	top: 50%;
 	left: 50%;
-	margin: -250px;
-	background: red;
+	margin: -125px -190px;
+	border-top: 0px;
+	border-bottom: 0px;
+	border-radius: 50px;
 }
 
-.popup-date{
-	font-size: 30px;
+.small-font {
+	font-size: 10px;
+	font-weight: 600;
+	opacity: .5;
 }
 
-.blackout-window{
+.popup-date-cell {
+	color: black;
+	border-radius: 5px;
+}
+
+.first-row-cell {
+	font-weight: 600;
+}
+
+.date-enable-button {
+	text-align: center;
+	background-color: #0000cd;
+	border: #0000cd;
+	font-size: 14px;
+	color: #fff;
+	padding: 5px 25px;
+}
+
+#popUpTitle {
+	width: 100%;
+	padding: 5px;
+}
+
+.cancel-event {
+	background: transparent;
+	border: #000 1px solid;
+	padding: 5px 25px;
+	font-size: 14px;
+	font-weight: 150;
+}
+
+#saveEvent {
+	background: #ff0000;
+	border: none;
+	padding: 5px 25px;
+	font-size: 14px;
+	font-weight: 500;
+	color: #fff;
+	border: #fff 1px solid;
+	width: 85%;
+}
+
+/* --------------- BLACKOUT WINDOW --------------- */
+
+.blackout-window {
 	position: fixed;
 	height: 100%;
 	width: 100%;
 	background: #000;
 	z-index: 2;
-	opacity: .5;
+	opacity: .4;
 }

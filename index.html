@@ -1,0 +1,241 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Calendar</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+</head>
+
+<body>
+	<!-- Calendar -->
+	<div class="container">
+		<div class="calendar">
+			<header>
+				<h2 id="calendarMonth" data-month="9">September</h2>
+				<a id="prevMonth" data-value="-1" class="btn-prev fontawesome-angle-left" href="#"></a>
+				<a id="nextMonth" data-value="1" class="btn-next fontawesome-angle-right" href="#"></a>
+			</header>
+
+			<table>
+				<thead>
+					<tr>
+						<td>Mo</td>
+						<td>Tu</td>
+						<td>We</td>
+						<td>Th</td>
+						<td>Fr</td>
+						<td>Sa</td>
+						<td>Su</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id="row1">
+						<td class="prev-month" data-value="8/26/2018">26</td>
+						<td class="prev-month" data-value="8/27/2018">27</td>
+						<td class="prev-month" data-value="8/28/2018">28</td>
+						<td class="prev-month" data-value="8/29/2018">29</td>
+						<td class="prev-month" data-value="8/30/2018">30</td>
+						<td class="prev-month" data-value="8/31/2018">31</td>
+						<td data-value="9/1/2018">1</td>
+					</tr>
+					<tr id="row2">
+						<td data-value="9/2/2018">2</td>
+						<td data-value="9/3/2018">3</td>
+						<td data-value="9/4/2018">4</td>
+						<td data-value="9/5/2018">5</td>
+						<td data-value="9/6/2018">6</td>
+						<td data-value="9/7/2018">7</td>
+						<td data-value="9/8/2018">8</td>
+					</tr>
+					<tr id="row3">
+						<td data-value="9/9/2018">9</td>
+						<td data-value="9/10/2018" class="event">10</td>
+						<td data-value="9/11/2018">11</td>
+						<td data-value="9/12/2018">12</td>
+						<td data-value="9/13/2018">13</td>
+						<td data-value="9/14/2018">14</td>
+						<td data-value="9/15/2018">15</td>
+					</tr>
+					<tr id="row4">
+						<td data-value="9/16/2018">16</td>
+						<td data-value="9/17/2018">17</td>
+						<td data-value="9/18/2018">18</td>
+						<td data-value="9/19/2018">19</td>
+						<td data-value="9/20/2018">20</td>
+						<td data-value="9/21/2018" class="event">21</td>
+						<td data-value="9/22/2018">22</td>
+					</tr>
+					<tr id="row5">
+						<td data-value="9/23/2018" class="selected-day event">23</td>
+						<td data-value="9/24/2018">24</td>
+						<td data-value="9/25/2018">25</td>
+						<td data-value="9/26/2018">26</td>
+						<td data-value="9/27/2018">27</td>
+						<td data-value="9/28/2018">28</td>
+						<td data-value="9/29/2018">29</td>
+					</tr>
+					<tr id="row6">
+						<td data-value="9/30/2018">30</td>
+						<td data-value="10/1/2018" class="next-month">1</td>
+						<td data-value="10/2/2018" class="next-month">2</td>
+						<td data-value="10/3/2018" class="next-month">3</td>
+						<td data-value="10/4/2018" class="next-month">4</td>
+						<td data-value="10/5/2018" class="next-month">5</td>
+						<td data-value="10/6/2018" class="next-month">6</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+
+	<!-- Event Container -->
+	<div class="event-container">
+		<div class="event-head">
+			<header>
+				<h2 id="eventDate" data-value="9/26/2018">26th September, 2018</h2>
+			</header>
+		</div>
+		<div class="event-list overflow-auto">
+			<table>
+				<tr>
+					<td>
+						<span class="event-text">
+							Events:-
+						</span>
+					</td>
+					<td>
+						<ul>
+							<li class="margin10 li-odd">
+								<div>
+									<span class="event-content">Time:-&nbsp;&nbsp;</span>
+									<span class="event-info">10:00 to 11:00</span>
+								</div>
+								<table class="margin-top-5">
+									<tr>
+										<td class="event-content">
+											Event:- &nbsp;&nbsp;
+										</td>
+										<td class="event-info">
+											Hi dsfsfdsfsdf sdfsdf f sd f sd f sd f dsfsdfsd fsfsdfs df
+										</td>
+									</tr>
+								</table>
+							</li>
+							<li class="margin10 li-even">
+								<div>
+									<span class="event-content">Time:-&nbsp;&nbsp;</span>
+									<span class="event-info">10:00 to 11:00</span>
+								</div>
+								<table class="margin-top-5">
+									<tr>
+										<td class="event-content">
+											Event:- &nbsp;&nbsp;
+										</td>
+										<td class="event-info">
+											Hi dsfsfdsfsdf sdfsdf f sd f sd f sd f dsfsdfsd fsfsdfs df
+										</td>
+									</tr>
+								</table>
+							</li>
+							<li class="margin10 li-odd">
+								<div>
+									<span class="event-content">Time:-&nbsp;&nbsp;</span>
+									<span class="event-info">10:00 to 11:00</span>
+								</div>
+								<table class="margin-top-5">
+									<tr>
+										<td class="event-content">
+											Event:- &nbsp;&nbsp;
+										</td>
+										<td class="event-info">
+											Hi dsfsfdsfsdf sdfsdf f sd f sd f sd f dsfsdfsd fsfsdfs df
+										</td>
+									</tr>
+								</table>
+							</li>
+							<li class="margin10 li-even">
+								<div>
+									<span class="event-content">Time:-&nbsp;&nbsp;</span>
+									<span class="event-info">10:00 to 11:00</span>
+								</div>
+								<table class="margin-top-5">
+									<tr>
+										<td class="event-content">
+											Event:- &nbsp;&nbsp;
+										</td>
+										<td class="event-info">
+											Hi dsfsfdsfsdf sdfsdf f sd f sd f sd f dsfsdfsd fsfsdfs df
+										</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</table>
+
+
+
+		</div>
+		<div class="event-add">
+			<button id="addEventBtn">Add Event</button>
+		</div>
+	</div>
+
+	<!-- Balckout window -->
+	<div class="blackout-window hide"></div>
+
+	<!-- Add event Popup -->
+	<div class="add-event-popup hide">
+		<table class="margin10">
+			<tr>
+				<td class="padding10 first-row-cell">
+					<span>Date:-</span>
+				</td>
+				<td class="popup-date-cell padding10">
+					<input type="date" value='2018-07-22' disabled id="popUpDate" />
+				</td>
+				<td class="padding10">
+					<button id="enableBtn" class="date-enable-button">Enable</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="padding10 first-row-cell">
+					<span>Time:-</span>
+				</td>
+				<td class="padding10">
+					<span class="small-font">From:-</span><br>
+					<input class="margin-top-5" type="time" value='00:00' id="popUpTimeFrom" />
+				</td>
+				<td class="padding10">
+					<span class="small-font">To:-</span><br>
+					<input class="margin-top-5" type="time" value='01:00' id="popUpTimeTo" />
+				</td>
+			</tr>
+			<tr>
+				<td class="padding10 first-row-cell">
+					<span>Title:-</span>
+				</td>
+				<td colspan="2" class="padding10">
+					<input type="text" id="popUpTitle" placeholder="Add title...." />
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class="text-align-right padding10">
+					<button class="cancel-event" id="cancelEvent">Cancel</button>
+				</td>
+				<td class="text-align-right padding10">
+					<button id="saveEvent">Save</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<link rel="stylesheet" href="CSS/event-minified.css">
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script defer src="JS/events.js"></script>
+</body>
+
+</html>
