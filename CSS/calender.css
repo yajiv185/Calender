@@ -1,0 +1,217 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- FONTAWESOME ---------- */
+/* ---------- https://fortawesome.github.com/Font-Awesome/ ---------- */
+/* ---------- http://weloveiconfonts.com/ ---------- */
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+*[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* ---------- GENERAL ---------- */
+
+body {
+	background: #f9f9f9;
+	color: #0e171c;
+	font: 300 100%/1.5em 'Lato', sans-serif;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 2em;
+	line-height: 1.25em;
+	margin: .25em 0;
+}
+
+h3 {
+	font-size: 1.5em;
+	line-height: 1em;
+	margin: .33em 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container {
+	height: 538px;
+	left: 0%;
+	margin: -255px 150px;
+	position: absolute;
+	top: 50%;
+	width: 510px;
+}
+
+.hide {
+	display: none;
+}
+
+/* ---------- CALENDAR ---------- */
+
+.calendar {
+	text-align: center;
+}
+
+.calendar header {
+	position: relative;
+}
+
+.calendar h2 {
+	text-transform: uppercase;
+}
+
+.calendar thead {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.calendar tbody {
+	color: #7c8a95;
+}
+
+.calendar tbody td:hover {
+	border: 2px solid #00addf;
+}
+
+.calendar td {
+	border: 2px solid transparent;
+	border-radius: 50%;
+	display: inline-block;
+	height: 4em;
+	line-height: 4em;
+	text-align: center;
+	width: 4em;
+}
+
+.calendar .prev-month,
+.calendar .next-month {
+	color: #cbd1d2;
+}
+
+.calendar .prev-month:hover,
+.calendar .next-month:hover {
+	border: 2px solid #cbd1d2;
+}
+
+.current-day {
+	background: #00addf;
+	color: #f9f9f9;
+}
+
+.event {
+	cursor: pointer;
+	position: relative;
+}
+
+.event:after {
+	background: #00addf;
+	border-radius: 50%;
+	bottom: .5em;
+	display: block;
+	content: '';
+	height: .5em;
+	left: 50%;
+	margin: -.25em 0 0 -.25em;
+	position: absolute;
+	width: .5em;
+}
+
+.event.current-day:after {
+	background: #f9f9f9;
+}
+
+.btn-prev,
+.btn-next {
+	border: 2px solid #cbd1d2;
+	border-radius: 50%;
+	color: #cbd1d2;
+	height: 2em;
+	font-size: .75em;
+	line-height: 2em;
+	margin: -1em;
+	position: absolute;
+	top: 50%;
+	width: 2em;
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+	background: #cbd1d2;
+	color: #f9f9f9;
+}
+
+.btn-prev {
+	left: 6em;
+}
+
+.btn-next {
+	right: 6em;
+}
+
+/*-------------event-container-----------*/
+.event-container {
+	border: #000 5px solid;
+	height: 538px;
+	right: 0%;
+	top: 50%;
+	margin: -255px 150px;
+	position: absolute;
+	width: 510px;
+}
+
+.event-head {
+	height: 10%;
+	text-align: center;
+}
+
+.event-list {
+	height: 70%;
+	border: #000 5px solid;
+}
+
+.event-add {
+	text-align: center;
+	/* border: #000 5px solid; */
+	margin-top: 10px;
+}
+
+button {
+	padding: 10px 20px;
+	border-radius: 50px;
+	font-size: 20px;
+	background: #00addf;
+	border:  2px solid #00addf;
+}
+
+.add-event-popup {
+	position: fixed;
+	z-index: 3;
+	height: 500px;
+	width: 500px;
+	border: #000 5px solid;
+	top: 50%;
+	left: 50%;
+	margin: -250px;
+	background: red;
+}
+
+.popup-date{
+	font-size: 30px;
+}
+
+.blackout-window{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	z-index: 2;
+	opacity: .5;
+}
